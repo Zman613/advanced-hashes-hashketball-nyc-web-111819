@@ -50,11 +50,8 @@ def game_hash
 end
 
 def num_points_scored(name)
-  binding.pry
   game_hash.each do |team, info|
-    binding.pry
     info[:players].each do |player|
-      binding.pry
       if player[:player_name] == name
         return player[:points]
       end
