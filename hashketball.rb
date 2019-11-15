@@ -11,6 +11,7 @@ def game_hash
       :team_name => "Charlotte Hornets",
       :colors => ["Turquoise", "Purple"],
       :players => []
+    }
   }
 
   home = {
@@ -20,8 +21,13 @@ def game_hash
   }
 
   home.each do |key, i|
-    i.each do |stat, x|
-      game[:home][:players][x] << {key => stat}
+    x = 0
+    i.each do |stat|
+      if !game[:home][:players][x]
+        game[:home][:players][x] = {}
+      end
+      game[:home][:players][x][key] = stat
+      x += 1
     end
   end
 
@@ -32,8 +38,13 @@ def game_hash
   }
 
   away.each do |key, i|
-    i.each do |stat, x|
-      game[:away][:players][x] << {key => stat}
+    x = 0
+    i.each do |stat|
+      if !game[:away][:players][x]
+        game[:away][:players][x] = {}
+      end
+      game[:away][:players][x][key] = stat
     end
   end
+  game
 end
