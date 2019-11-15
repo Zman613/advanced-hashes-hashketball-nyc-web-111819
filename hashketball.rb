@@ -114,6 +114,7 @@ def big_shoe_rebounds
     info[:players].each do |player|
       if player[:shoe] > x
         x = player[:shoe]
+      end
     end
   end
 end
