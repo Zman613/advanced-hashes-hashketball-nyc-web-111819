@@ -44,6 +44,7 @@ def game_hash
         game[:away][:players][x] = {}
       end
       game[:away][:players][x][key] = stat
+      x += 1
     end
   end
   game
