@@ -49,14 +49,12 @@ def game_hash
   game
 end
 
-def num_points_scored(player)
-  game_hash.each do |team, extra|
-    i = 0
-    while i < game_hash[team][:players].size do
-      if game_hash[team][:players][i][:player_name] == player
-        return game_hash[team][:players][i][:points]
+def num_points_scored(name)
+  game_hash.each do |team, info|
+    info[:players].each do |player|
+      if player[:player_name] == player
+        return player[:points]
       end
-      i += 1
     end
   end
 end
