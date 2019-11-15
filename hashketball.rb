@@ -25,5 +25,5 @@ def game_hash
       ]
   }
 
-
+  name_h = ["Alan Anderson",	"Reggie Evans",	"Brook Lopez",	"Mason Plumlee",	"Jason Terry"]
 end
