@@ -102,7 +102,7 @@ def player_stats(name)
   game_hash.each do |team, info|
     info[:players].each do |player|
       if player[:player_name] == name
-        return player.reject {|s, r| s == player[:player_name]}
+        return player.reject {|s, r| s == :player_name}
       end
     end
   end
