@@ -114,6 +114,7 @@ def big_shoe_rebounds
   game_hash.each do |team, info|
     info[:players].each do |player|
       if player[:shoe] > x
+        x = player[:shoe]
         path[:player] = player
       end
     end
